@@ -1,0 +1,19 @@
+
+<@ _.each(models, function(m){ @>
+	
+	<div class="thumbnail span{{m.get("cardSize")}} {{m.get("cardColor")}}" style="margin:10px;">
+            <@ if(m.get("new")){ @>
+                  <span class="label label-important">New!</span>
+            <@ } @>
+          
+            <div class="caption">
+              <h5> {{m.get("title")}} </h5>
+              <p>{{m.get("company")}}</p>
+              <p>{{m.get("description").substring(1,140)}} ... </p>
+            </div>
+    </div>
+
+<@})@>
+
+
+		
